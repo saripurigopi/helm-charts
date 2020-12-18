@@ -48,8 +48,9 @@ loki:
         active_index_directory: /var/loki/index
         cache_location: /var/loki/cache
         cache_ttl: 168h
-      filesystem:
-        directory: /var/loki/chunks
+      aws:
+        s3: http://minioadmin:minioadmin@localhost:9000
+        s3forcepathstyle: true 
       index_queries_cache_config:
         memcached:
           batch_size: 100
